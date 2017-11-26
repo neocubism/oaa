@@ -47,3 +47,9 @@ function TestMath:test5()
   luaunit.assertTrue(isIntersecting)
   luaunit.assertEquals(intersection, self.P1)
 end
+
+function TestMath:test5()
+  print("with multiple intersections")
+  local isIntersecting, intersection = math.doLinesIntersect(self.P5, self.P6, self.P9, self.P2, self.P3, self.P2, self.P3)
+  luaunit.assertTrue(isIntersecting)
+  luaunit.assertEquals(intersection, self.P1, self.P3)
